@@ -1,10 +1,10 @@
 package com.emmet.core.factory;
 
-import com.emmet.core.BeanDefinition;
-import com.emmet.core.PropertyValue;
-import com.emmet.core.PropertyValues;
-import com.emmet.core.support.AutowireCapableBeanFactory;
-import org.junit.Test;
+		import com.emmet.core.BeanDefinition;
+		import com.emmet.core.PropertyValue;
+		import com.emmet.core.PropertyValues;
+		import com.emmet.core.support.AutowireCapableBeanFactory;
+		import org.junit.Test;
 
 /**
  * BeanFactory测试类
@@ -20,7 +20,7 @@ public class BeanFactoryTest {
 		//初始化BeanFactory
 		BeanFactory beanFactory = new AutowireCapableBeanFactory();
 		//创建需要注入的Bean
-		BeanDefinition beanDefinition = new BeanDefinition("com.emmet.mvc.core.factory.HelloWorldService");
+		BeanDefinition beanDefinition = new BeanDefinition("com.emmet.core.factory.HelloWorldService");
 
 		//设置属性
 		PropertyValues propertyValues = new PropertyValues();
