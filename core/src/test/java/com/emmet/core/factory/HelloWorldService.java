@@ -1,4 +1,4 @@
-package com.emmet.mvc.core.factory;
+package com.emmet.core.factory;
 
 /**
  * 测试注入的对象

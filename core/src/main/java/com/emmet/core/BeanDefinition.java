@@ -1,4 +1,4 @@
-package com.emmet.mvc.core;
+package com.emmet.core;
 
 /**
  * 封装Bean，可以保存额外的源数据

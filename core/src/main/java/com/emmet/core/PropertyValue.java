@@ -1,4 +1,4 @@
-package com.emmet.mvc.core;
+package com.emmet.core;
 
 /**
  * Property方式注入属性

@@ -1,4 +1,4 @@
-package com.emmet.mvc.core;
+package com.emmet.core;
 
 import java.util.ArrayList;
 import java.util.List;

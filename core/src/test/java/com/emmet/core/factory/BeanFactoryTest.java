@@ -1,9 +1,9 @@
-package com.emmet.mvc.core.factory;
+package com.emmet.core.factory;
 
-import com.emmet.mvc.core.BeanDefinition;
-import com.emmet.mvc.core.PropertyValue;
-import com.emmet.mvc.core.PropertyValues;
-import com.emmet.mvc.core.support.AutowireCapableBeanFactory;
+import com.emmet.core.BeanDefinition;
+import com.emmet.core.PropertyValue;
+import com.emmet.core.PropertyValues;
+import com.emmet.core.support.AutowireCapableBeanFactory;
 import org.junit.Test;
 
 /**

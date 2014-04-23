@@ -1,6 +1,6 @@
-package com.emmet.mvc.core.factory;
+package com.emmet.core.factory;
 
-import com.emmet.mvc.core.BeanDefinition;
+import com.emmet.core.BeanDefinition;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
