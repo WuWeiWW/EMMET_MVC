@@ -6,7 +6,7 @@ import com.emmet.mvc.core.PropertyValues;
 import org.junit.Test;
 
 /**
- * TODO this class description
+ * BeanFactory测试类
  * Created by EMMET on 14-4-23
  *
  * @author EMMET

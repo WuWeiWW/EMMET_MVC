@@ -1,7 +1,7 @@
 package com.emmet.mvc.core.factory;
 
 /**
- * TODO this class description
+ * 测试注入的对象
  * Created by EMMET on 14-4-23
  *
  * @author EMMET

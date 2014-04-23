@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * TODO this class description
+ * Bean管理工厂，主要用于Bean的创建和各种Bean创建的父类
  * Created by EMMET on 14-4-23
  *
  * @author EMMET
@@ -46,8 +46,9 @@ public abstract class AbstractBeanFactory implements BeanFactory {
 	/**
 	 * 创建Bean，让之类以自己的方式创建
 	 *
-	 * @param beanDefinition
-	 * @return
+	 * @param beanDefinition Bean定义的类
+	 * @return 根据beanDefinition 中的 beanClassName 创建Class对象然后创建Bean对象，返回创建后的Bean
+	 *
 	 */
 	protected abstract Object doCreateBean(BeanDefinition beanDefinition) throws InstantiationException, IllegalAccessException;
 }

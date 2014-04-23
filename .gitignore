@@ -2,3 +2,4 @@
 /.idea
 /core/core.iml
 /mvc/mvc.iml
+core/target/
