@@ -1,7 +1,8 @@
-package com.emmet.mvc.core.factory;
+package com.emmet.mvc.core.support;
 
 import com.emmet.mvc.core.BeanDefinition;
 import com.emmet.mvc.core.PropertyValue;
+import com.emmet.mvc.core.factory.AbstractBeanFactory;
 
 import java.lang.reflect.Field;
 

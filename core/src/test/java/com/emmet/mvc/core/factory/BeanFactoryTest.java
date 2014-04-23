@@ -3,6 +3,7 @@ package com.emmet.mvc.core.factory;
 import com.emmet.mvc.core.BeanDefinition;
 import com.emmet.mvc.core.PropertyValue;
 import com.emmet.mvc.core.PropertyValues;
+import com.emmet.mvc.core.support.AutowireCapableBeanFactory;
 import org.junit.Test;
 
 /**
