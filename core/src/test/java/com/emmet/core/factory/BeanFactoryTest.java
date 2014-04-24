@@ -1,10 +1,10 @@
 package com.emmet.core.factory;
 
-		import com.emmet.core.BeanDefinition;
-		import com.emmet.core.PropertyValue;
-		import com.emmet.core.PropertyValues;
-		import com.emmet.core.support.AutowireCapableBeanFactory;
-		import org.junit.Test;
+import com.emmet.core.BeanDefinition;
+import com.emmet.core.PropertyValue;
+import com.emmet.core.PropertyValues;
+import com.emmet.core.support.AutowireCapableBeanFactory;
+import org.junit.Test;
 
 /**
  * BeanFactory测试类

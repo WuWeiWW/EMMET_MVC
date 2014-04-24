@@ -27,7 +27,7 @@ public abstract class AbstractBeanFactory implements BeanFactory {
 	}
 
 	@Override
-	public void registerBeanDefinition(String name, BeanDefinition beanDefinition){
+	protected void registerBeanDefinition(String name, BeanDefinition beanDefinition){
 		if (beanDefinition.getBeanClass() == null) {
 			throw new NullPointerException("Bean " + name + " 的Class不存在或未加载");
 		}
@@ -44,7 +44,7 @@ public abstract class AbstractBeanFactory implements BeanFactory {
 
 
 	/**
-	 * 创建Bean，让之类以自己的方式创建
+	 * 创建Bean，让子类以自己的方式创建,可能会有XML,Annotation等方式的注入方式
 	 *
 	 * @param beanDefinition Bean定义的类
 	 * @return 根据beanDefinition 中的 beanClassName 创建Class对象然后创建Bean对象，返回创建后的Bean
