@@ -27,7 +27,7 @@ public abstract class AbstractBeanFactory implements BeanFactory {
 	}
 
 	@Override
-	protected void registerBeanDefinition(String name, BeanDefinition beanDefinition){
+	public void registerBeanDefinition(String name, BeanDefinition beanDefinition){
 		if (beanDefinition.getBeanClass() == null) {
 			throw new NullPointerException("Bean " + name + " 的Class不存在或未加载");
 		}
