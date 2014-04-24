@@ -1,7 +1,7 @@
 package com.emmet.core;
 
 /**
- * 封装Bean，可以保存额外的源数据
+ * 封装Bean，可以保存额外的源数据,保存在BeanFactory中，用于包装Bean的实体
  * 这样封装后，为自动注入提供标准
  * @author EMMET
  */
@@ -13,7 +13,7 @@ public class BeanDefinition {
 
 	private String beanClassName; // bean的Class路径
 
-	private PropertyValues propertyValues;
+	private PropertyValues propertyValues = new PropertyValues();
 
 	public void setBean(Object bean) {
 		this.bean = bean;
