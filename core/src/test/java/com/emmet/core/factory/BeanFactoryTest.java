@@ -32,8 +32,8 @@ public class BeanFactoryTest {
 
 		//获取Bean
 		HelloWorldService helloWorldService = (HelloWorldService) beanFactory.getBean(beanName);
-		helloWorldService.sayHello();
-		System.out.println("通过属性注入的数据：" + helloWorldService.getText());
+//		helloWorldService.sayHello();
+//		System.out.println("通过属性注入的数据：" + helloWorldService.getText());
 
 		//获得Bean定义
 		/*System.out.println("*******通过获得Bean定义输出:");

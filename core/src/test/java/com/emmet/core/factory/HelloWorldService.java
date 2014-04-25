@@ -1,7 +1,8 @@
 package com.emmet.core.factory;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  * 测试注入的对象
@@ -11,75 +12,89 @@ import java.util.Map;
  */
 public class HelloWorldService {
 
-	private String text;
+	private int a;
+	private Integer aa;
+	private String b;
+	private HelloWorldService innerBean;
 
-	private HelloWorldService helloWorldService;
+	private HelloWorldService outerBean;
 
-	private List<Object> objects;
+	private Collection<String> collection;
 
-	private Map<String,Object> stringObjectMap;
+	private Map<String,String> map;
+	private Properties properties;
 
-	private int intA;
-
-	private double aDouble;
-
-	public HelloWorldService(int intA, String text) {
-		this.intA = intA;
-		this.text = text;
-	}
 
 	public HelloWorldService() {
 	}
 
-	public void sayHello() {
-		System.out.println(text);
+	public HelloWorldService(int a, String b, HelloWorldService outerBean) {
+		this.a = a;
+		this.b = b;
+		this.outerBean = outerBean;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public int getA() {
+		return a;
 	}
 
-	public String getText() {
-		return text;
+	public void setA(int a) {
+		this.a = a;
 	}
 
-	public HelloWorldService getHelloWorldService() {
-		return helloWorldService;
+	public Integer getAa() {
+		return aa;
 	}
 
-	public void setHelloWorldService(HelloWorldService helloWorldService) {
-		this.helloWorldService = helloWorldService;
+	public void setAa(Integer aa) {
+		this.aa = aa;
 	}
 
-	public List<Object> getObjects() {
-		return objects;
+	public String getB() {
+		return b;
 	}
 
-	public void setObjects(List<Object> objects) {
-		this.objects = objects;
+	public void setB(String b) {
+		this.b = b;
 	}
 
-	public Map<String, Object> getStringObjectMap() {
-		return stringObjectMap;
+	public HelloWorldService getInnerBean() {
+		return innerBean;
 	}
 
-	public void setStringObjectMap(Map<String, Object> stringObjectMap) {
-		this.stringObjectMap = stringObjectMap;
+	public void setInnerBean(HelloWorldService innerBean) {
+		this.innerBean = innerBean;
 	}
 
-	public int getIntA() {
-		return intA;
+	public HelloWorldService getOuterBean() {
+		return outerBean;
 	}
 
-	public void setIntA(int intA) {
-		this.intA = intA;
+	public void setOuterBean(HelloWorldService outerBean) {
+		this.outerBean = outerBean;
 	}
 
-	public double getaDouble() {
-		return aDouble;
+	public Collection<String> getCollection() {
+		return collection;
 	}
 
-	public void setaDouble(double aDouble) {
-		this.aDouble = aDouble;
+	public void setCollection(Collection<String> collection) {
+		this.collection = collection;
+	}
+
+	public Map<String, String> getMap() {
+		return map;
+	}
+
+	public void setMap(Map<String, String> map) {
+		this.map = map;
+	}
+
+	public Properties getProperties() {
+		return properties;
+	}
+
+	public void setProperties(Properties properties) {
+		this.properties = properties;
 	}
 }

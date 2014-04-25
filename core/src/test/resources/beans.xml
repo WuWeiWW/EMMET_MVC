@@ -1,13 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean name="helloWorldServiceInner" class="com.emmet.core.factory.HelloWorldService">
-		<property name="text" value="hello world !!!"/>
+	<bean id="str1" class="java.lang.String" value="str1" />
+	<bean id="str2" class="java.lang.String" value="string test " />
+	<!--基本数据类型待支持-->
+
+	<bean id="outerBean" class="com.emmet.core.factory.HelloWorldService">
+		<property name="a" value="11111"/>
+		<property name="aa" value="222222"/>
+		<property name="b" value="我是外部Bean,有Map+property注入哦"/>
+		<property name="map">
+			<map>
+				<entry key="s1" value-ref="str1" />
+				<entry key="s2" value-ref="str2" />
+				<entry key="s3" value="str3" />
+			</map>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="p1">I'm p1</prop>
+				<prop key="p3">I'm p3</prop>
+				<prop key="p4">I'm p4</prop>
+				<prop key="p5">I'm p5</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="bean" class="com.emmet.core.factory.HelloWorldService">
+		<property name="a" value="1000"/>
+		<property name="aa" value="1001" />
+		<property name="b" value="我是Bean,延迟加载的哦" />
+		<property name="innerBean">
+			<bean class="com.emmet.core.factory.HelloWorldService">
+				<property name="a" value="99" />
+				<property name="aa" value="100" />
+				<property name="b" value="我是内部Bean,内部注入+collection注入"/>
+				<property name="outerBean" ref="outerBean"/>
+				<property name="collection">
+					<set>
+						<ref bean="str1"/>
+						<bean class="java.lang.String" value="connection value" />
+					</set>
+				</property>
+			</bean>
+		</property>
+		<property name="collection">
+			<list>
+				<ref bean="str1"/>
+				<ref bean="str2"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="contractorInit" class="com.emmet.core.factory.HelloWorldService">
+		<constructor-arg value="555" type="int" />
+		<constructor-arg value="666" type="java.lang.String" />
+		<constructor-arg ref="outerBean"/>
 	</bean>
 
-	<bean name="helloWorldService" class="com.emmet.core.factory.HelloWorldService">
-
+	<!--TODO 延迟加载暂未实现-->
+	<bean id="lazyInitBean" class="com.emmet.core.factory.HelloWorldService" lazy-init="true">
 	</bean>
 </beans>
