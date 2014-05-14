@@ -1,6 +1,4 @@
-package com.emmet.core.factory;
-
-import com.emmet.core.BeanDefinition;
+package com.emmet.core.beans.factory;
 
 /**
  * 容器
@@ -24,7 +22,7 @@ public interface BeanFactory {
 	 * @param name Bean的名字
 	 * @return Bean定义对象，如果Bean不存在，则返回null
 	 */
-	public BeanDefinition getBeanDefinition(String name);
+	//public BeanDefinition getBeanDefinition(String name);
 
 	/**
 	 * 注册一个Bean
@@ -32,5 +30,5 @@ public interface BeanFactory {
 	 * @param name           要注册Bean的名字
 	 * @param beanDefinition Bean对象
 	 */
-	public void registerBeanDefinition(String name, BeanDefinition beanDefinition);
+	//public void registerBeanDefinition(String name, BeanDefinition beanDefinition);
 }

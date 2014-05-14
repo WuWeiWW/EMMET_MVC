@@ -1,4 +1,4 @@
-package com.emmet.core;
+package com.emmet.core.beans;
 
 import java.util.ArrayList;
 import java.util.List;

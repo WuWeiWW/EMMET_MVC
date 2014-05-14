@@ -1,4 +1,4 @@
-package com.emmet.core;
+package com.emmet.core.beans;
 
 /**
  * 封装Bean，可以保存额外的源数据,保存在BeanFactory中，用于包装Bean的实体

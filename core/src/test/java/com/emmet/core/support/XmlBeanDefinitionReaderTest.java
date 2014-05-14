@@ -1,8 +1,9 @@
 package com.emmet.core.support;
 
-import com.emmet.core.BeanDefinition;
+import com.emmet.core.beans.BeanDefinition;
+import com.emmet.core.beans.support.XmlBeanDefinitionReader;
 import com.emmet.core.factory.HelloWorldService;
-import com.emmet.core.io.ResourceLoader;
+import com.emmet.core.beans.io.ResourceLoader;
 import org.junit.Test;
 
 import java.util.Map;

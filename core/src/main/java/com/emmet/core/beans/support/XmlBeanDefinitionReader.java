@@ -1,8 +1,8 @@
-package com.emmet.core.support;
+package com.emmet.core.beans.support;
 
-import com.emmet.core.AbstractBeanDefinitionReader;
-import com.emmet.core.BeanDefinition;
-import com.emmet.core.io.ResourceLoader;
+import com.emmet.core.beans.AbstractBeanDefinitionReader;
+import com.emmet.core.beans.BeanDefinition;
+import com.emmet.core.beans.io.ResourceLoader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

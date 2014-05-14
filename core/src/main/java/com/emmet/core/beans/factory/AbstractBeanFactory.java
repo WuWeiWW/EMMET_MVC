@@ -1,6 +1,6 @@
-package com.emmet.core.factory;
+package com.emmet.core.beans.factory;
 
-import com.emmet.core.BeanDefinition;
+import com.emmet.core.beans.BeanDefinition;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -20,27 +20,27 @@ public abstract class AbstractBeanFactory implements BeanFactory {
 		BeanDefinition beanDefinition = this.beanDefinitionMap.get(name);
 		return beanDefinition == null ? null : beanDefinition.getBean();
 	}
-
-	@Override
-	public BeanDefinition getBeanDefinition(String name) {
-		return this.beanDefinitionMap.get(name);
-	}
-
-	@Override
-	public void registerBeanDefinition(String name, BeanDefinition beanDefinition){
-		if (beanDefinition.getBeanClass() == null) {
-			throw new NullPointerException("Bean " + name + " 的Class不存在或未加载");
-		}
-		Object bean = null;
-		try {
-			bean = doCreateBean(beanDefinition);
-		} catch (InstantiationException | IllegalAccessException e) {
-			e.printStackTrace();
-		}
-		beanDefinition.setBean(bean);
-		beanDefinitionMap.put(name, beanDefinition);
-
-	}
+//
+//	@Override
+//	public BeanDefinition getBeanDefinition(String name) {
+//		return this.beanDefinitionMap.get(name);
+//	}
+//
+//	@Override
+//	public void registerBeanDefinition(String name, BeanDefinition beanDefinition){
+//		if (beanDefinition.getBeanClass() == null) {
+//			throw new NullPointerException("Bean " + name + " 的Class不存在或未加载");
+//		}
+//		Object bean = null;
+//		try {
+//			bean = doCreateBean(beanDefinition);
+//		} catch (InstantiationException | IllegalAccessException e) {
+//			e.printStackTrace();
+//		}
+//		beanDefinition.setBean(bean);
+//		beanDefinitionMap.put(name, beanDefinition);
+//
+//	}
 
 
 	/**

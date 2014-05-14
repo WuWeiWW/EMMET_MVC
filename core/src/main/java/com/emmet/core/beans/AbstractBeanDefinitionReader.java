@@ -1,6 +1,6 @@
-package com.emmet.core;
+package com.emmet.core.beans;
 
-import com.emmet.core.io.ResourceLoader;
+import com.emmet.core.beans.io.ResourceLoader;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

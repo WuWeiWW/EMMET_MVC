@@ -1,4 +1,4 @@
-package com.emmet.core.io;
+package com.emmet.core.beans.io;
 
 import java.io.IOException;
 import java.io.InputStream;

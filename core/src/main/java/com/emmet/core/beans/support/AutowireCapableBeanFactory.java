@@ -1,8 +1,8 @@
-package com.emmet.core.support;
+package com.emmet.core.beans.support;
 
-import com.emmet.core.BeanDefinition;
-import com.emmet.core.PropertyValue;
-import com.emmet.core.factory.AbstractBeanFactory;
+import com.emmet.core.beans.BeanDefinition;
+import com.emmet.core.beans.PropertyValue;
+import com.emmet.core.beans.factory.AbstractBeanFactory;
 
 import java.lang.reflect.Field;
 

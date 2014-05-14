@@ -1,5 +1,6 @@
 package com.emmet.core.io;
 
+import com.emmet.core.beans.io.ResourceLoader;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;

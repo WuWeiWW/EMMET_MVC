@@ -1,9 +1,10 @@
 package com.emmet.core.factory;
 
-import com.emmet.core.BeanDefinition;
-import com.emmet.core.PropertyValue;
-import com.emmet.core.PropertyValues;
-import com.emmet.core.support.AutowireCapableBeanFactory;
+import com.emmet.core.beans.BeanDefinition;
+import com.emmet.core.beans.PropertyValue;
+import com.emmet.core.beans.PropertyValues;
+import com.emmet.core.beans.factory.BeanFactory;
+import com.emmet.core.beans.support.AutowireCapableBeanFactory;
 import org.junit.Test;
 
 /**
@@ -28,7 +29,7 @@ public class BeanFactoryTest {
 		beanDefinition.setPropertyValues(propertyValues);
 		//注入Bean
 		String beanName = "helloWorldService";
-		beanFactory.registerBeanDefinition(beanName, beanDefinition);
+//		beanFactory.registerBeanDefinition(beanName, beanDefinition);
 
 		//获取Bean
 		HelloWorldService helloWorldService = (HelloWorldService) beanFactory.getBean(beanName);

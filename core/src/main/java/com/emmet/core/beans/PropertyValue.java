@@ -1,4 +1,4 @@
-package com.emmet.core;
+package com.emmet.core.beans;
 
 /**
  * Property方式注入属性

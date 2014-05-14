@@ -1,4 +1,4 @@
-package com.emmet.core;
+package com.emmet.core.beans;
 
 /**
  * 从配置中读取Bean
